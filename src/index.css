@@ -11,3 +11,23 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.white {
+  border: 2px solid #ccc;
+  padding: 10px;
+}
+
+.available {
+  background-color: green;
+  color: rgb(238, 238, 238);
+}
+
+.Red {
+  color: red;
+  cursor: pointer;
+}
+
+.not {
+  background-color: grey;
+  cursor: pointer;
+}
