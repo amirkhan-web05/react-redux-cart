@@ -7,9 +7,9 @@ export const Details = () => {
   const items = useSelector(({ fruits }) => fruits.items);
   const [available, setAvaible] = React.useState(0);
 
-  const changeAvaible = (index) => {
+  const changeAvaible = React.useCallback((index) => {
     setAvaible(index);
-  };
+  }, []);
 
   const details = items.filter((item) => {
     return Number(item.id) === Number(id);

@@ -1,4 +1,10 @@
-import { ADD_TO_CART, CLEAR_CART, MINUS_CART_ITEM, PLUS_CART_ITEM, REMOVE_TO_CART } from '../types';
+import {
+  ADD_TO_CART,
+  CLEAR_CART,
+  MINUS_CART_ITEM,
+  PLUS_CART_ITEM,
+  REMOVE_TO_CART,
+} from '../types';
 
 export const addToCart = (fruits) => ({
   type: ADD_TO_CART,

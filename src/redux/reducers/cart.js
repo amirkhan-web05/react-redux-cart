@@ -14,6 +14,7 @@ export const cart = (state = initialState, action) => {
   switch (action.type) {
     case ADD_TO_CART: {
       const { count } = action.payload;
+
       const foundCart = state.items.find(
         (item) => item.id === action.payload.id
       );
@@ -22,7 +23,7 @@ export const cart = (state = initialState, action) => {
         foundCart.count = count;
       } else {
         return {
-          ...state.items,
+          ...state,
           items: [...state.items, action.payload],
         };
       }
@@ -31,6 +32,7 @@ export const cart = (state = initialState, action) => {
     }
 
     case REMOVE_TO_CART: {
+      debugger;
       return {
         ...state,
         items: state.items.filter((item) => item.id !== action.payload),
@@ -64,8 +66,8 @@ export const cart = (state = initialState, action) => {
     case CLEAR_CART: {
       return {
         ...state.items,
-        items:[]
-      }
+        items: [],
+      };
     }
 
     default:

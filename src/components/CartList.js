@@ -5,7 +5,7 @@ import { fetchFruits, fetchTitle } from '../redux/actions/fruits';
 import { setCurrentPage } from '../redux/actions/paginate';
 import { CartItems } from './CartItems';
 
-export const CartList = () => {
+export const CartList = React.memo(() => {
   const dispatch = useDispatch();
 
   const handelCartFruits = (fruits) => {
@@ -46,6 +46,7 @@ export const CartList = () => {
             ))
           : ''}
       </div>
+        <h1>hekkoo</h1>
       {pages.map((page, index) => (
         <span
           style={{ margin: '0 10px', cursor: 'pointer' }}
@@ -58,4 +59,4 @@ export const CartList = () => {
       ))}
     </>
   );
-};
+});
