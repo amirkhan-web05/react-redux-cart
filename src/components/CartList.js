@@ -20,7 +20,7 @@ export const CartList = React.memo(() => {
 
   React.useEffect(() => {
     dispatch(fetchFruits(currentPages, perPages, searchValue));
-  }, [currentPages]);
+  }, []);
 
   function searchHandler() {
     dispatch(fetchTitle(searchValue, currentPages, perPages));
@@ -46,7 +46,7 @@ export const CartList = React.memo(() => {
             ))
           : ''}
       </div>
-        <h1>hekkoo</h1>
+      <h1>hekkoo</h1>
       {pages.map((page, index) => (
         <span
           style={{ margin: '0 10px', cursor: 'pointer' }}
