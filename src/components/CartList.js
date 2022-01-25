@@ -20,7 +20,7 @@ export const CartList = React.memo(() => {
 
   React.useEffect(() => {
     dispatch(fetchFruits(currentPages, perPages, searchValue));
-  }, []);
+  }, [currentPages]);
 
   function searchHandler() {
     dispatch(fetchTitle(searchValue, currentPages, perPages));
